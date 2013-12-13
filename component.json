@@ -1,0 +1,14 @@
+{
+  "name": "html-tags",
+  "version": "0.0.0",
+  "description": "List of standard HTML tags",
+  "license": "MIT",
+  "main": "html-tags.js",
+  "repo": "sindresorhus/html-tags",
+  "scripts": ["html-tags.js"],
+  "keywords": [
+    "html",
+    "tags",
+    "elements"
+  ]
+}

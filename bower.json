@@ -1,0 +1,17 @@
+{
+  "name": "html-tags",
+  "version": "0.0.0",
+  "description": "List of standard HTML tags",
+  "main": "html-tags.js",
+  "keywords": [
+    "html",
+    "tags",
+    "elements"
+  ],
+  "ignore": [
+    ".*",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}
