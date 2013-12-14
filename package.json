@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "List of standard HTML tags",
   "license": "MIT",
-  "main": "html-tags.js",
+  "main": "html-tags.json",
   "repository": "sindresorhus/html-tags",
   "author": {
     "name": "Sindre Sorhus",
@@ -17,7 +17,7 @@
     "test": "mocha"
   },
   "files": [
-    "html-tags.js"
+    "html-tags.json"
   ],
   "keywords": [
     "html",

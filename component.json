@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "List of standard HTML tags",
   "license": "MIT",
-  "main": "html-tags.js",
+  "main": "html-tags.json",
   "repo": "sindresorhus/html-tags",
-  "scripts": ["html-tags.js"],
+  "scripts": ["html-tags.json"],
   "keywords": [
     "html",
     "tags",

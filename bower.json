@@ -2,7 +2,7 @@
   "name": "html-tags",
   "version": "0.1.0",
   "description": "List of standard HTML tags",
-  "main": "html-tags.js",
+  "main": "html-tags.json",
   "keywords": [
     "html",
     "tags",

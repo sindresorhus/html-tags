@@ -2,14 +2,12 @@
 
 > List of standard HTML tags
 
-Returns an array of the standard HTML tags.
-
-[Also available in JSON.](html-tags.json)
+It's just a [JSON file](html-tags.json). So can be used wherever.
 
 
 ## Install
 
-Download [manually](https://github.com/sindresorhus/html-tags/releases) or with a package-manager.
+Download [manually](https://raw.github.com/sindresorhus/html-tags/master/html-tags.json) or with a package-manager.
 
 #### [npm](https://npmjs.org/package/html-tags)
 
@@ -32,21 +30,8 @@ component install sindresorhus/html-tags
 
 ## Example
 
-##### Node.js
-
 ```js
 var htmlTags = require('html-tags');
-```
-
-##### Bower
-
-```html
-<script src="bower_components/html-tags/html-tags.js"></script>
-```
-
-##### Usage
-
-```js
 console.log(htmlTags);
 //=> ['a', 'abbr', 'acronym', ...]
 ```
