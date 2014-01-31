@@ -1,6 +1,6 @@
 {
   "name": "html-tags",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "List of standard HTML tags",
   "license": "MIT",
   "main": "html-tags.json",
@@ -11,7 +11,7 @@
     "url": "http://sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha"
@@ -25,6 +25,6 @@
     "elements"
   ],
   "devDependencies": {
-    "mocha": "~1.x"
+    "mocha": "*"
   }
 }
