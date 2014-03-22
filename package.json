@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "description": "List of standard HTML tags",
   "license": "MIT",
-  "main": "html-tags.json",
   "repository": "sindresorhus/html-tags",
   "author": {
     "name": "Sindre Sorhus",
@@ -14,9 +13,11 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "browser": "a=$npm_package_name; browserify -r ./index:$a -s $a index.js -o browser.js"
   },
   "files": [
+    "index.js",
     "html-tags.json"
   ],
   "keywords": [
@@ -25,6 +26,7 @@
     "elements"
   ],
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "browserify": "^3.0.0"
   }
 }

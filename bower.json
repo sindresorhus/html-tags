@@ -2,7 +2,15 @@
   "name": "html-tags",
   "version": "0.2.0",
   "description": "List of standard HTML tags",
-  "main": "html-tags.json",
+  "license": "MIT",
+  "main": "browser.js",
+  "authors": [
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "http://sindresorhus.com"
+    }
+  ],
   "keywords": [
     "html",
     "tags",
@@ -10,8 +18,9 @@
   ],
   "ignore": [
     ".*",
-    "test.js",
     "component.json",
-    "package.json"
+    "package.json",
+    "test.js",
+    "index.js"
   ]
 }
