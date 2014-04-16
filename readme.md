@@ -7,8 +7,6 @@ It's just a [JSON file](html-tags.json). So can be used wherever.
 
 ## Install
 
-Download [manually](https://github.com/sindresorhus/html-tags/releases) or with a package-manager.
-
 ```bash
 $ npm install --save html-tags
 ```
@@ -25,13 +23,9 @@ $ component install sindresorhus/html-tags
 ## Usage
 
 ```js
-var htmlTags = require('html-tags');
-
 console.log(htmlTags);
 //=> ['a', 'abbr', 'acronym', ...]
 ```
-
-Can be used with require, global and AMD in the browser.
 
 
 ## License

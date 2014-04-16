@@ -150,11 +150,9 @@ module.exports=[
 	"xmp"
 ]
 
-},{}],"Focm2+":[function(_dereq_,module,exports){
+},{}],2:[function(_dereq_,module,exports){
 module.exports = _dereq_('./html-tags.json');
 
-},{"./html-tags.json":1}],"html-tags":[function(_dereq_,module,exports){
-module.exports=_dereq_('Focm2+');
-},{}]},{},["Focm2+"])
-("Focm2+")
+},{"./html-tags.json":1}]},{},[2])
+(2)
 });
