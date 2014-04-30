@@ -7,15 +7,15 @@ It's just a [JSON file](html-tags.json). So can be used wherever.
 
 ## Install
 
-```bash
+```sh
 $ npm install --save html-tags
 ```
 
-```bash
+```sh
 $ bower install --save html-tags
 ```
 
-```bash
+```sh
 $ component install sindresorhus/html-tags
 ```
 
