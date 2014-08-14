@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var htmlTags = require('./html-tags');
+var htmlTags = require('./');
 
 it('should return an array of HTML tags', function () {
 	assert(Array.isArray(htmlTags));

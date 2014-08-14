@@ -11,14 +11,6 @@ It's just a [JSON file](html-tags.json). So can be used wherever.
 $ npm install --save html-tags
 ```
 
-```sh
-$ bower install --save html-tags
-```
-
-```sh
-$ component install sindresorhus/html-tags
-```
-
 
 ## Usage
 
@@ -30,4 +22,4 @@ console.log(htmlTags);
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
