@@ -4,6 +4,8 @@
 
 It's just a [JSON file](html-tags.json). So can be used wherever.
 
+It intentionally leaves out obsolete tags.
+
 
 ## Install
 
