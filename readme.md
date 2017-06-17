@@ -17,8 +17,19 @@ $ npm install --save html-tags
 ## Usage
 
 ```js
+const htmlTags = require('html-tags');
+
 console.log(htmlTags);
 //=> ['a', 'abbr', 'acronym', ...]
+```
+
+And void (self-closing) tags:
+
+```js
+const voidHtmlTags = require('html-tags/void');
+
+console.log(voidHtmlTags);
+//=> ['area', 'base', 'br', ...]
 ```
 
 

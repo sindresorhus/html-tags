@@ -17,7 +17,9 @@
   },
   "files": [
     "index.js",
-    "html-tags.json"
+    "void.js",
+    "html-tags.json",
+    "html-tags-void.json"
   ],
   "keywords": [
     "html",
@@ -25,7 +27,9 @@
     "tags",
     "elements",
     "list",
-    "w3c"
+    "w3c",
+    "void",
+    "self-closing"
   ],
   "devDependencies": {
     "mocha": "*"
