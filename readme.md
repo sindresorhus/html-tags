@@ -2,15 +2,15 @@
 
 > List of standard HTML tags
 
-It's just a [JSON file](html-tags.json). So can be used wherever.
+It's just a couple of JSON files that can be used in any environment.
 
 It intentionally leaves out obsolete tags.
 
 
 ## Install
 
-```sh
-$ npm install --save html-tags
+```
+$ npm install html-tags
 ```
 
 
@@ -35,4 +35,4 @@ console.log(voidHtmlTags);
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
