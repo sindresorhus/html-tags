@@ -1,5 +1,3 @@
-export = voidHtmlTags;
-
 /**
 List of void (self-closing) HTML tags.
 
@@ -11,4 +9,6 @@ console.log(voidHtmlTags);
 //=> ['area', 'base', 'br', ...]
 ```
 */
-declare const voidHtmlTags: string[];
+declare const voidHtmlTags: readonly string[];
+
+export = voidHtmlTags;

@@ -1,3 +1,3 @@
-declare const voidHtmlTags: string[];
+declare const voidHtmlTags: readonly string[];
 
 export = voidHtmlTags;

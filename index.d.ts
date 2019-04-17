@@ -1,5 +1,3 @@
-declare const htmlTags: string[];
-
 /**
 List of standard HTML tags.
 
@@ -11,4 +9,6 @@ console.log(htmlTags);
 //=> ['a', 'abbr', 'acronym', ...]
 ```
 */
+declare const htmlTags: readonly string[];
+
 export = htmlTags;

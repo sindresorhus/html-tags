@@ -1,3 +1,3 @@
-declare const htmlTags: string[];
+declare const htmlTags: readonly string[];
 
 export = htmlTags;
