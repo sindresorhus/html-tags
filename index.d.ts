@@ -6,7 +6,7 @@ List of standard HTML tags.
 import htmlTags = require('html-tags');
 
 console.log(htmlTags);
-//=> ['a', 'abbr', 'acronym', ...]
+//=> ['a', 'abbr', 'acronym', …]
 ```
 */
 declare const htmlTags: readonly string[];

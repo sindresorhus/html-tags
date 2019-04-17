@@ -6,7 +6,7 @@ List of void (self-closing) HTML tags.
 import voidHtmlTags = require('html-tags/void');
 
 console.log(voidHtmlTags);
-//=> ['area', 'base', 'br', ...]
+//=> ['area', 'base', 'br', …]
 ```
 */
 declare const voidHtmlTags: readonly string[];

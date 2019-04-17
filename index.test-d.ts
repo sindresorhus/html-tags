@@ -5,10 +5,10 @@ import htmlTagsJson = require('./html-tags.json');
 import voidHtmlTagsJson = require('./html-tags-void.json');
 
 expectType<readonly string[]>(htmlTags);
-expectError(htmlTags.push(""));
+expectError(htmlTags.push(''));
 expectType<readonly string[]>(voidHtmlTags);
-expectError(voidHtmlTags.push(""));
+expectError(voidHtmlTags.push(''));
 expectType<readonly string[]>(htmlTagsJson);
-expectError(htmlTagsJson.push(""));
+expectError(htmlTagsJson.push(''));
 expectType<readonly string[]>(voidHtmlTagsJson);
-expectError(voidHtmlTagsJson.push(""));
+expectError(voidHtmlTagsJson.push(''));
