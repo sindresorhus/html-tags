@@ -1,4 +1,4 @@
-# html-tags [![Build Status](https://travis-ci.com/sindresorhus/html-tags.svg?branch=master)](https://travis-ci.com/github/sindresorhus/html-tags)
+# html-tags
 
 > List of standard HTML tags
 
