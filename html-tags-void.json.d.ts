@@ -1,27 +1,27 @@
 export type HTMLTagsVoid =
-  | 'area'
-  | 'base'
-  | 'br'
-  | 'col'
-  | 'embed'
-  | 'hr'
-  | 'img'
-  | 'input'
-  | 'link'
-  | 'menuitem'
-  | 'meta'
-  | 'param'
-  | 'source'
-  | 'track'
-  | 'wbr'
+	| 'area'
+	| 'base'
+	| 'br'
+	| 'col'
+	| 'embed'
+	| 'hr'
+	| 'img'
+	| 'input'
+	| 'link'
+	| 'menuitem'
+	| 'meta'
+	| 'param'
+	| 'source'
+	| 'track'
+	| 'wbr'
 
 /**
-List of standard HTML tags.
+List of standard, self-closing HTML tags.
 @example
 ```
 import htmlTags = require('html-tags/html-tags-void.json');
 console.log(htmlTags);
-//=> [| 'a' | 'abbr' | 'acronym' …]
+//=> ['a' | 'abbr' | 'acronym' …]
 ```
 */
 declare const htmlTags: readonly HTMLTagsVoid[];
