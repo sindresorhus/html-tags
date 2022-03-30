@@ -117,15 +117,17 @@ type HTMLTags =
 	| 'video'
 	| 'wbr'
 
-
 /**
 List of standard HTML tags.
+
 @example
 ```
 import htmlTags = require('html-tags/html-tags.json');
+
 console.log(htmlTags);
 //=> ['a' | 'abbr' | 'acronym' …]
 ```
 */
 declare const htmlTags: HTMLTags[];
+
 export default htmlTags;
