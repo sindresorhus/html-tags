@@ -1,6 +1,6 @@
 import {expectType, expectError} from 'tsd';
-import htmlTags from '.'
-import htmlTagsVoid from './void'
+import htmlTags = require('.');
+import htmlTagsVoid = require('./void');
 
 expectType<readonly htmlTags.htmlTags[]>(htmlTags);
 expectType<readonly string[]>(htmlTags);

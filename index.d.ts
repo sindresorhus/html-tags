@@ -132,4 +132,4 @@ console.log(htmlTags);
 */
 declare const htmlTags: readonly htmlTags.htmlTags[];
 
-export default htmlTags;
+export = htmlTags;
