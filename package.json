@@ -22,9 +22,7 @@
 		"void.js",
 		"void.d.ts",
 		"html-tags.json",
-		"html-tags.json.d.ts",
-		"html-tags-void.json",
-		"html-tags-void.json.d.ts"
+		"html-tags-void.json"
 	],
 	"keywords": [
 		"html",
