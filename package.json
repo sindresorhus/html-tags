@@ -22,9 +22,7 @@
 		"void.js",
 		"void.d.ts",
 		"html-tags.json",
-		"html-tags.json.d.ts",
-		"html-tags-void.json",
-		"html-tags-void.json.d.ts"
+		"html-tags-void.json"
 	],
 	"keywords": [
 		"html",
@@ -41,5 +39,10 @@
 		"ava": "^1.4.1",
 		"tsd": "^0.7.2",
 		"xo": "^0.24.0"
+	},
+	"xo": {
+		"rules": {
+			"import/extensions": "off"
+		}
 	}
 }
