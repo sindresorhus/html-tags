@@ -88,6 +88,7 @@ declare namespace htmlTags {
 		| 's'
 		| 'samp'
 		| 'script'
+		| 'search'
 		| 'section'
 		| 'select'
 		| 'slot'
