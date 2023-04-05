@@ -29,3 +29,7 @@ const voidHtmlTags = require('html-tags/void');
 console.log(voidHtmlTags);
 //=> ['area', 'base', 'br', …]
 ```
+
+## Contribute
+
+Make sure to update types in `index.d.ts` when changing HTML elements.
