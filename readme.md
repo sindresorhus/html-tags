@@ -8,14 +8,14 @@ It intentionally leaves out obsolete tags.
 
 ## Install
 
-```
-$ npm install html-tags
+```sh
+npm install html-tags
 ```
 
 ## Usage
 
 ```js
-const htmlTags = require('html-tags');
+import htmlTags from 'html-tags';
 
 console.log(htmlTags);
 //=> ['a', 'abbr', 'acronym', …]
@@ -24,7 +24,7 @@ console.log(htmlTags);
 And void (self-closing) tags:
 
 ```js
-const voidHtmlTags = require('html-tags/void');
+import {voidHtmlTags} from 'html-tags';
 
 console.log(voidHtmlTags);
 //=> ['area', 'base', 'br', …]
