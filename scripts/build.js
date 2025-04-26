@@ -36,7 +36,7 @@ async function getTags() {
 	return Array.from(
 		$('th:first-child code', table),
 		element => $(element).text().trim(),
-	);
+	).sort();
 }
 
 async function getVoidTags() {
