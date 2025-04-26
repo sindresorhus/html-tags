@@ -8,9 +8,7 @@ export type VoidHtmlTags =
 	| 'img'
 	| 'input'
 	| 'link'
-	| 'menuitem'
 	| 'meta'
-	| 'param'
 	| 'source'
 	| 'track'
 	| 'wbr';

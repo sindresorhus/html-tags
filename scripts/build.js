@@ -30,33 +30,13 @@ const getHtml = async url => {
 };
 
 async function getTags() {
-	const htmlTags = [];
-
-	{
-		const html = await getHtml('https://html.spec.whatwg.org/multipage/indices.html');
-		const $ = cheerio.load(html);
-		const table = $('#elements-3 ~ table')[0];
-		const tags = Array.from(
-			$('th:first-child code', table),
-			element => $(element).text().trim(),
-		);
-
-		htmlTags.push(...tags);
-	}
-
-	{
-		const html = await getHtml('https://html.spec.whatwg.org/multipage/obsolete.html');
-		const $ = cheerio.load(html);
-		const container = $('#non-conforming-features ~ dl')[0];
-		const tags = Array.from(
-			$('> dt > dfn > code', container),
-			element => $(element).text().trim(),
-		);
-
-		htmlTags.push(...tags);
-	}
-
-	return htmlTags.sort();
+	const html = await getHtml('https://html.spec.whatwg.org/multipage/indices.html');
+	const $ = cheerio.load(html);
+	const table = $('#elements-3 ~ table')[0];
+	return Array.from(
+		$('th:first-child code', table),
+		element => $(element).text().trim(),
+	);
 }
 
 async function getVoidTags() {
@@ -67,13 +47,7 @@ async function getVoidTags() {
 		element => $(element).text().trim(),
 	);
 
-	return [
-		// https://html.spec.whatwg.org/multipage/obsolete.html#menuitem
-		'menuitem',
-		// https://html.spec.whatwg.org/multipage/obsolete.html#param
-		'param',
-		...tags,
-	].sort();
+	return tags.sort();
 }
 
 await Promise.all([
