@@ -21,13 +21,16 @@
 	},
 	"scripts": {
 		"//test": "xo && ava",
-		"test": "ava"
+		"test": "ava",
+		"build": "node scripts/build.js"
 	},
 	"files": [
 		"index.js",
-		"index.d.ts",
 		"html-tags.json",
-		"html-tags-void.json"
+		"html-tags-void.json",
+		"index.d.ts",
+		"html-tags.d.ts",
+		"html-tags-void.d.ts"
 	],
 	"keywords": [
 		"html",
@@ -42,6 +45,7 @@
 	],
 	"devDependencies": {
 		"ava": "^6.1.2",
-		"xo": "^0.58.0"
+		"cheerio": "^1.0.0",
+		"xo": "^0.60.0"
 	}
 }
