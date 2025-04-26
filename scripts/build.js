@@ -33,6 +33,7 @@ async function getTags() {
 	const html = await getHtml('https://html.spec.whatwg.org/multipage/indices.html');
 	const $ = cheerio.load(html);
 	const table = $('#elements-3 ~ table')[0];
+
 	return Array.from(
 		$('th:first-child code', table),
 		element => $(element).text().trim(),
@@ -42,12 +43,11 @@ async function getTags() {
 async function getVoidTags() {
 	const html = await getHtml('https://html.spec.whatwg.org/multipage/syntax.html');
 	const $ = cheerio.load(html);
-	const tags = Array.from(
+
+	return Array.from(
 		$('dt:has(#void-elements) + dd > code > a'),
 		element => $(element).text().trim(),
-	);
-
-	return tags.sort();
+	).sort();
 }
 
 await Promise.all([
@@ -55,6 +55,7 @@ await Promise.all([
 	{getData: getVoidTags, basename: 'html-tags-void', typeName: 'VoidHtmlTags'},
 ].map(async ({getData, basename, typeName}) => {
 	const tags = await getData();
+
 	await fs.writeFile(
 		new URL(`../${basename}.json`, import.meta.url),
 		JSON.stringify(tags, undefined, '\t') + '\n',
