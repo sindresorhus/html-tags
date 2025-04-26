@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import * as cheerio from 'cheerio';
 
 const CACHE_DIRECTORY = new URL('../.cache/', import.meta.url);
+const CACHE_DURATION = 10 * 60 * 60 * 1000; // 10 hours
 
 const getHtml = async url => {
 	const cacheFile = new URL(url.split('/').at(-1), CACHE_DIRECTORY);
@@ -13,7 +14,7 @@ const getHtml = async url => {
 	} catch {}
 
 	if (stat) {
-		if (Date.now() - stat.ctimeMs < /* 10 hours */ 10 * 60 * 60 * 1000) {
+		if ((Date.now() - stat.ctimeMs) < CACHE_DURATION) {
 			return fs.readFile(cacheFile, 'utf8');
 		}
 
@@ -65,4 +66,3 @@ await Promise.all([
 		`export type ${typeName} =\n${tags.map(tag => `\t| '${tag}'`).join('\n')};\n`,
 	);
 }));
-
