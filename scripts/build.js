@@ -22,6 +22,11 @@ const getHtml = async url => {
 	}
 
 	const response = await fetch(url);
+
+	if (response.ok) {
+		throw new Error('Request failed.')
+	}
+
 	const text = await response.text();
 
 	await fs.mkdir(CACHE_DIRECTORY, {recursive: true});
