@@ -1,0 +1,26 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # “At 00:00 on day-of-month 1.” https://crontab.guru/#0_0_1_*_*
+    - cron: "0 0 1 * *"
+
+jobs:
+  update:
+    if: github.event_name != 'schedule' || github.repository == 'sindresorhus/html-tags'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: npm run build
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: Update
+          branch: automated-update
+          branch-suffix: timestamp
+          title: Update

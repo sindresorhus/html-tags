@@ -4,7 +4,7 @@
 
 It's just a couple of JSON files that can be used in any environment.
 
-It intentionally leaves out obsolete tags.
+It intentionally leaves out [obsolete tags](https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features).
 
 ## Install
 
