@@ -14,7 +14,7 @@ const getHtml = async url => {
 	} catch {}
 
 	if (stat) {
-		if ((Date.now() - stat.ctimeMs) < CACHE_DURATION) {
+		if ((Date.now() - stat.mtimeMs) < CACHE_DURATION) {
 			return fs.readFile(cacheFile, 'utf8');
 		}
 
