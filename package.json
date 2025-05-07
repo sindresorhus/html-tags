@@ -17,11 +17,10 @@
 	},
 	"sideEffects": false,
 	"engines": {
-		"node": ">=18.20"
+		"node": ">=20.10"
 	},
 	"scripts": {
-		"//test": "xo && ava",
-		"test": "ava",
+		"test": "xo && ava",
 		"build": "node scripts/build.js"
 	},
 	"files": [
@@ -44,8 +43,8 @@
 		"self-closing"
 	],
 	"devDependencies": {
-		"ava": "^6.1.2",
+		"ava": "^6.3.0",
 		"cheerio": "^1.0.0",
-		"xo": "^0.60.0"
+		"xo": "^0.61.0-2"
 	}
 }
