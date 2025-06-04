@@ -23,7 +23,7 @@ const getHtml = async url => {
 
 	const response = await fetch(url);
 
-	if (response.ok) {
+	if (!response.ok) {
 		throw new Error('Request failed.');
 	}
 
