@@ -86,6 +86,7 @@ export type HtmlTags =
 	| 'search'
 	| 'section'
 	| 'select'
+	| 'selectedcontent'
 	| 'slot'
 	| 'small'
 	| 'source'
