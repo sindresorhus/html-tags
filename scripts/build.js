@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import process from 'node:process';
 import * as cheerio from 'cheerio';
 
 const CACHE_DIRECTORY = new URL('../.cache/', import.meta.url);
@@ -56,6 +57,15 @@ async function getVoidTags() {
 	).sort();
 }
 
+const isAutomatedJob = process.argv.includes('--ci')
+let existing;
+if (isAutomatedJob) {
+	try {
+		({default: existing} = await import('../index.js'));
+	} catch {}
+	existing = new Set(existing);
+}
+
 await Promise.all([
 	{getData: getTags, basename: 'html-tags', typeName: 'HtmlTags'},
 	{getData: getVoidTags, basename: 'html-tags-void', typeName: 'VoidHtmlTags'},
@@ -70,4 +80,14 @@ await Promise.all([
 		new URL(`../${basename}.d.ts`, import.meta.url),
 		`export type ${typeName} =\n${tags.map(tag => `\t| '${tag}'`).join('\n')};\n`,
 	);
+
+	if (isAutomatedJob && basename === 'html-tags') {
+		const addedTags = tags.filter(tag => !existing.has(tag))
+		const content = new Intl.ListFormat('en-US').format(addedTags.map(tag => `\`${tag}\``));
+
+		fs.writeFileSync(
+			new URL('added-tags', CACHE_DIRECTORY),
+			content,
+		);
+	}
 }));

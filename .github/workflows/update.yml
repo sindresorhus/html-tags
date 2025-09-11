@@ -16,11 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npm install
-      - run: npm run build
+      - run: |
+          npm install
+          npm run build -- --ci
+          echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+          echo "ADDED_TAGS=$(cat .cache/added-tags)" >> "$GITHUB_ENV"
       - uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: Update
-          branch: automated-update
+          commit-message: Add ${{env.ADDED_TAGS }}
+          title: Add ${{env.ADDED_TAGS }}
+          branch: automated-update-${{ env.CURRENT_DATE }}
           branch-suffix: timestamp
-          title: Update
