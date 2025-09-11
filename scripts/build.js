@@ -85,7 +85,7 @@ await Promise.all([
 		const addedTags = tags.filter(tag => !existing.has(tag))
 		const content = new Intl.ListFormat('en-US').format(addedTags.map(tag => `\`${tag}\``));
 
-		fs.writeFileSync(
+		await fs.writeFile(
 			new URL('added-tags', CACHE_DIRECTORY),
 			content,
 		);
