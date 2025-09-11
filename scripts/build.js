@@ -57,12 +57,13 @@ async function getVoidTags() {
 	).sort();
 }
 
-const isAutomatedJob = process.argv.includes('--ci')
+const isAutomatedJob = process.argv.includes('--ci');
 let existing;
 if (isAutomatedJob) {
 	try {
 		({default: existing} = await import('../index.js'));
 	} catch {}
+
 	existing = new Set(existing);
 }
 
@@ -82,7 +83,7 @@ await Promise.all([
 	);
 
 	if (isAutomatedJob && basename === 'html-tags') {
-		const addedTags = tags.filter(tag => !existing.has(tag))
+		const addedTags = tags.filter(tag => !existing.has(tag));
 		const content = new Intl.ListFormat('en-US').format(addedTags.map(tag => `\`${tag}\``));
 
 		await fs.writeFile(
